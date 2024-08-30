@@ -22,8 +22,6 @@ const greeting = () => {
         isFirstRunRef.current = false;
       }
 
-      console.log(isFirstRunRef.current);
-
       // Animasi mengetik
       for (let lineIndex = 0; lineIndex < codeLines.length; lineIndex++) {
         const line = codeLines[lineIndex];

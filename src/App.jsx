@@ -72,8 +72,6 @@ const App = () => {
     };
   }, []);
 
-  console.log(activeSection);
-
   // Tambahkan fungsi scrollToSection sebagai prop ke Navbar
   return (
     <>
