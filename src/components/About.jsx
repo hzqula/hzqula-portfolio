@@ -46,7 +46,7 @@ const About = ({ id }) => {
     <>
       <section
         id={id}
-        className="flex items-center flex-col lg:justify-center lg:w-full h-dvh lg:h-[calc(100vh_-_5rem)] mx-auto bg-primary gap-16 lg:gap-0 snap-start md:snap-end snap-always"
+        className="flex items-center flex-col lg:justify-center lg:w-full h-dvh lg:h-[calc(100vh_-_5rem)] mx-auto bg-primary gap-16 lg:gap-0 snap-start lg:snap-end snap-always"
       >
         <div className="flex flex-col items-center justify-center w-full h-full">
           <div className="flex flex-col items-center justify-center gap-4">
