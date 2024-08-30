@@ -140,7 +140,7 @@ const Hero = ({ id }) => {
             <BtnSecondary>
               <a
                 className="py-2 pl-6 pr-4 mx-[0.1rem] inline-flex items-center gap-4"
-                href={"/docs/my-cv.pdf"}
+                href={"/docs/my-resume.pdf"}
                 target="_blank"
                 rel="noopener noreferrer"
                 locale={false}
