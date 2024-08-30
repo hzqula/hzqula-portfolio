@@ -92,7 +92,7 @@ const App = () => {
       >
         <Hero id="hero" className="snap-always" />
         <About id="about" className="snap-always" />
-        <Works id="works" className="snap-always snap-end" />
+        <Works id="works" className="snap-always" />
         <Contact id="contact" className="snap-always" />
       </div>
     </>
