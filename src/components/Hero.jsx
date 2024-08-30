@@ -33,7 +33,7 @@ const Hero = ({ id }) => {
     <section className="relative w-full h-screen overflow-hidden snap-start snap-always">
       <main
         id={id}
-        className="flex flex-col items-center justify-center w-[85%] h-screen mx-auto lg:w-4/5 "
+        className="flex flex-col items-center justify-center w-[85%] h-dvh mx-auto lg:w-4/5 "
       >
         <div className="flex flex-col items-center justify-center w-full lg:mt-20">
           <div className="flex flex-col items-center justify-center gap-4">

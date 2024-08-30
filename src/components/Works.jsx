@@ -143,7 +143,7 @@ const Works = ({ id }) => {
   return (
     <section
       id={id}
-      className="flex flex-col items-center h-screen lg:h-[calc(100vh_-_5rem)] justify-center w-screen mx-auto bg-ownWhite snap-end snap-always"
+      className="flex flex-col items-center h-dvh lg:h-[calc(100vh_-_5rem)] justify-center w-screen mx-auto bg-ownWhite snap-end snap-always"
     >
       <div className="relative flex flex-col items-center justify-center w-full h-full">
         <div className="flex flex-col items-center justify-center gap-4 mt-8 mb-2 lg:mt-0 lg:mb-8">
