@@ -41,7 +41,7 @@ const Hero = ({ id }) => {
               transition={{ type: "spring", delay: 0.3 }}
               initial={{ opacity: 0, x: 32 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-3xl font-extrabold sm:text-5xl lg:text-6xl font-text text-primary"
+              className="text-3xl font-extrabold text-center sm:text-5xl lg:text-6xl font-text text-primary"
             >
               Muhammad Faruq HZ
             </motion.h1>
