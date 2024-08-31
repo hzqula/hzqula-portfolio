@@ -32,6 +32,8 @@ const About = ({ id }) => {
   const dialog = [
     'In 2022. <span class="font-semibold">Alhamdulillah</span>, officially a student of <span class="font-semibold">Informatics Engineering</span> at <span class="font-semibold">UIN Suska Riau</span> admitted through the SBMPTN pathway, and proud to be part of the <span class="font-semibold">Pemuda Hijrah TIF A 2022</span>. Also a student who was confused about choosing between focusing on graphic design or programming. And finally decided to focus on both.',
     'I often play <span class="font-semibold">rubiks</span> and <span class="font-semibold">chess</span>, even though I know it\'s a waste of time. Btw my username in chess.com is <span class="font-semibold">FaruqHZ</span>.',
+    "I am a 4th semester student and so far have learned Java OOP programming, Data Structures and recently learned Web Programming, Mobile Programming, and Database Systems.",
+    "As an Informatics Engineering student with a strong interest in design and programming, I am dedicated to integrating these skills to create innovative and visually appealing application interfaces. Currently, I am focusing on front-end development, particularly using technologies such as ReactJS and TailwindCSS. I am committed to continuously learning new technologies to bring my ideas to life, with imagination as the only limit in my creative process.",
   ];
 
   const handleNextDialog = () => {
