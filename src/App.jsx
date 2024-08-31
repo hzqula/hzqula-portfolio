@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import NavbarOld from "./components/NavbarOld";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Works from "./components/Works";
