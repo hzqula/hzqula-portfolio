@@ -30,7 +30,7 @@ const Hero = ({ id }) => {
   };
 
   return (
-    <section className="relative w-full overflow-hidden h-dvh snap-start snap-always">
+    <section className="relative w-full h-full overflow-hidden snap-start snap-always">
       <main
         id={id}
         className="flex flex-col items-center justify-center w-[85%] h-full mx-auto lg:w-4/5 "
