@@ -6,7 +6,7 @@ const Contact = ({ id }) => {
   return (
     <section
       id={id}
-      className="flex items-center relative flex-col lg:justify-center lg:w-full h-full lg:h-[calc(100vh_-_5rem)] mx-auto bg-primary gap-16 lg:gap-0 snap-end snap-always"
+      className="flex items-center relative flex-col lg:justify-center lg:w-full h-svh lg:h-[calc(100vh_-_5rem)] mx-auto bg-primary gap-16 lg:gap-0 snap-end snap-always"
     >
       <div className="flex flex-col items-center justify-center w-full h-full">
         <div className="flex flex-col items-center justify-center gap-4">
@@ -14,7 +14,7 @@ const Contact = ({ id }) => {
             transition={{ type: "spring", delay: 0.3 }}
             initial={{ opacity: 0, x: 32 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="text-4xl font-bold text-ownWhite lg:text-6xl font-text "
+            className="text-4xl font-bold text-ownWhite lg:text-6xl font-text"
           >
             Contact Me
           </motion.h1>
