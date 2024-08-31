@@ -58,21 +58,11 @@ const App = () => {
 
     container.addEventListener("wheel", handleScroll, { passive: false });
 
-    // Tambahkan fungsi scrollToSection di sini
-    const scrollToSection = (sectionId) => {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-
     return () => {
       container.removeEventListener("wheel", handleScroll);
       observer.disconnect();
     };
   }, []);
-
-  // Tambahkan fungsi scrollToSection sebagai prop ke Navbar
   return (
     <>
       <Navbar
@@ -86,7 +76,7 @@ const App = () => {
       />
       <div
         ref={containerRef}
-        className="w-screen h-screen overflow-y-scroll no-scrollbar snap-y scroll-smooth snap-mandatory"
+        className="w-screen overflow-y-scroll h-dvh no-scrollbar snap-y scroll-smooth snap-mandatory"
       >
         <Hero id="hero" className="snap-always" />
         <About id="about" className="snap-always" />
