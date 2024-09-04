@@ -40,18 +40,20 @@ const App = () => {
 
       isScrolling = true;
       const direction = event.deltaY > 0 ? 1 : -1;
+
+      // Cek apakah sudah di section Contact dan mencoba scroll ke bawah
+      if (currentSectionIndex === sections.length - 1 && direction === 1) {
+        isScrolling = false;
+        return; // Hentikan scroll jika sudah di section terakhir
+      }
+
       const nextIndex = Math.max(
         0,
         Math.min(currentSectionIndex + direction, sections.length - 1)
       );
 
       if (nextIndex !== currentSectionIndex) {
-        const targetPosition = sections[nextIndex].offsetTop;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        });
+        sections[nextIndex].scrollIntoView({ behavior: "smooth" });
         currentSectionIndex = nextIndex;
       }
 
