@@ -46,7 +46,12 @@ const App = () => {
       );
 
       if (nextIndex !== currentSectionIndex) {
-        sections[nextIndex].scrollIntoView({ behavior: "smooth" });
+        const targetPosition = sections[nextIndex].offsetTop;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
         currentSectionIndex = nextIndex;
       }
 
