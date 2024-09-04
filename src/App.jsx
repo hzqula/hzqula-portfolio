@@ -38,17 +38,8 @@ const App = () => {
       event.preventDefault();
       if (isScrolling) return;
 
-      // Hanya terapkan pada mobile (misalnya, max-width 768px)
-      if (window.innerWidth > 768) return;
-
       isScrolling = true;
       const direction = event.deltaY > 0 ? 1 : -1;
-
-      if (currentSectionIndex === sections.length - 1 && direction === 1) {
-        isScrolling = false;
-        return;
-      }
-
       const nextIndex = Math.max(
         0,
         Math.min(currentSectionIndex + direction, sections.length - 1)
@@ -71,6 +62,22 @@ const App = () => {
       observer.disconnect();
     };
   }, []);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const handleScroll = (event) => {
+      if (currentSectionIndex === sections.length - 1 && event.deltaY > 0) {
+        event.preventDefault();
+      }
+    };
+
+    container.addEventListener("wheel", handleScroll, { passive: false });
+
+    return () => {
+      container.removeEventListener("wheel", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Navbar
