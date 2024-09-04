@@ -91,7 +91,7 @@ const App = () => {
       />
       <div
         ref={containerRef}
-        className="w-screen overflow-y-scroll h-lvh no-scrollbar snap-y scroll-smooth snap-mandatory"
+        className="w-screen h-screen overflow-y-scroll no-scrollbar snap-y scroll-smooth snap-mandatory"
       >
         <Hero id="hero" className="snap-always" />
         <About id="about" className="snap-always" />
