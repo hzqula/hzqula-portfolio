@@ -38,13 +38,15 @@ const App = () => {
       event.preventDefault();
       if (isScrolling) return;
 
+      // Hanya terapkan pada mobile (misalnya, max-width 768px)
+      if (window.innerWidth > 768) return;
+
       isScrolling = true;
       const direction = event.deltaY > 0 ? 1 : -1;
 
-      // Cek apakah sudah di section Contact dan mencoba scroll ke bawah
       if (currentSectionIndex === sections.length - 1 && direction === 1) {
         isScrolling = false;
-        return; // Hentikan scroll jika sudah di section terakhir
+        return;
       }
 
       const nextIndex = Math.max(
