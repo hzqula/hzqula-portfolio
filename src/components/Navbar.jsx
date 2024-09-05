@@ -23,15 +23,6 @@ const Navbar = ({ activeSection, scrollToSection }) => {
     };
   }, []);
 
-  // Menambahkan efek agar body tidak bisa di-scroll saat menu terbuka
-  useEffect(() => {
-    if (menu && isMobile) {
-      document.body.style.overscrollBehaviorY = "none"; // Mencegah scroll saat menu terbuka
-    } else {
-      document.body.style.overscrollBehaviorY = ""; // Mengembalikan scroll saat menu ditutup
-    }
-  }, [menu, isMobile]);
-
   const menuVariants = {
     open: {
       clipPath: `circle(1980px at calc(100% - 40px) 40px)`,
