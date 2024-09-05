@@ -23,13 +23,14 @@ const Navbar = ({ activeSection, scrollToSection }) => {
     };
   }, []);
 
+  // Menambahkan efek agar body tidak bisa di-scroll saat menu terbuka
   useEffect(() => {
-    if (menu) {
-      document.body.style.overscrollBehaviorY = "none";
+    if (menu && isMobile) {
+      document.body.style.overflow = "hidden"; // Mencegah scroll saat menu terbuka
     } else {
-      document.body.style.overscrollBehaviorY = "";
+      document.body.style.overflow = ""; // Mengembalikan scroll saat menu ditutup
     }
-  }, [menu]);
+  }, [menu, isMobile]);
 
   const menuVariants = {
     open: {
@@ -67,7 +68,6 @@ const Navbar = ({ activeSection, scrollToSection }) => {
       animate: menu ? { opacity: 1, x: 0 } : { opacity: 0, x: -32 },
     };
   };
-
   const animasiLinkSosmed = (delayAwal, delayAkhir) => {
     const delayBuka = delayAwal;
     const delayTutup = delayAkhir;
