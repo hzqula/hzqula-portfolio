@@ -26,6 +26,13 @@ const App = () => {
           window.history.pushState(null, null, `#${id}`);
           currentSectionIndex = Array.from(sections).indexOf(entry.target);
           setActiveSection(id);
+
+          // Add overscroll-behavior to body when Contact is active
+          if (id === "contact") {
+            document.body.style.overscrollBehaviorY = "none";
+          } else {
+            document.body.style.overscrollBehaviorY = "auto"; // Reset it when not on Contact
+          }
         }
       });
     }, options);
@@ -60,21 +67,8 @@ const App = () => {
     return () => {
       container.removeEventListener("wheel", handleScroll);
       observer.disconnect();
-    };
-  }, []);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    const handleScroll = (event) => {
-      if (currentSectionIndex === sections.length - 1 && event.deltaY > 0) {
-        event.preventDefault();
-      }
-    };
-
-    container.addEventListener("wheel", handleScroll, { passive: false });
-
-    return () => {
-      container.removeEventListener("wheel", handleScroll);
+      // Reset overscroll-behavior on cleanup
+      document.body.style.overscrollBehaviorY = "auto";
     };
   }, []);
 
@@ -91,7 +85,7 @@ const App = () => {
       />
       <div
         ref={containerRef}
-        className="w-screen overflow-y-scroll overscroll-y-none h-dvh no-scrollbar snap-y scroll-smooth snap-mandatory"
+        className="w-screen overflow-y-scroll h-dvh no-scrollbar snap-y scroll-smooth snap-mandatory"
       >
         <Hero id="hero" className="snap-always" />
         <About id="about" className="snap-always" />
