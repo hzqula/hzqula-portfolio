@@ -26,9 +26,9 @@ const Navbar = ({ activeSection, scrollToSection }) => {
   // Menambahkan efek agar body tidak bisa di-scroll saat menu terbuka
   useEffect(() => {
     if (menu && isMobile) {
-      document.body.style.overflow = "hidden"; // Mencegah scroll saat menu terbuka
+      document.body.style.overscrollBehaviorY = "none"; // Mencegah scroll saat menu terbuka
     } else {
-      document.body.style.overflow = ""; // Mengembalikan scroll saat menu ditutup
+      document.body.style.overscrollBehaviorY = ""; // Mengembalikan scroll saat menu ditutup
     }
   }, [menu, isMobile]);
 
