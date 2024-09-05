@@ -13,6 +13,14 @@ const Navbar = ({ activeSection, scrollToSection }) => {
   };
 
   useEffect(() => {
+    if (menu) {
+      document.body.style.overscrollBehaviorY = "none";
+    } else {
+      document.body.style.overscrollBehaviorY = "";
+    }
+  }, [menu]);
+
+  useEffect(() => {
     const updateScreenWidth = () => {
       setIsMobile(window.innerWidth <= 767);
     };
@@ -86,7 +94,7 @@ const Navbar = ({ activeSection, scrollToSection }) => {
       {/* Mobile Navbar */}
       {isMobile && (
         <motion.nav
-          className="fixed flex overscroll-y-none p-8 flex-col items-center justify-center top-0 z-[40] w-full h-dvh border-b bg-primary border-ownWhite"
+          className="fixed flex p-8 flex-col items-center justify-center top-0 z-[40] w-full h-dvh border-b bg-primary border-ownWhite"
           variants={menuVariants}
           initial="closed"
           animate={menu ? "open" : "closed"}
