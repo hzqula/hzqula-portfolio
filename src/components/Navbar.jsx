@@ -23,15 +23,6 @@ const Navbar = ({ activeSection, scrollToSection }) => {
     };
   }, []);
 
-  useEffect(() => {
-    if (menu) {
-      document.body.style.overscrollBehaviorY = "none";
-    } else {
-      document.body.style.overscrollBehaviorY = "";
-    }
-    console.log(document.body.style);
-  }, [menu]);
-
   const menuVariants = {
     open: {
       clipPath: `circle(1980px at calc(100% - 40px) 40px)`,
