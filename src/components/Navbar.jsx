@@ -94,7 +94,7 @@ const Navbar = ({ activeSection, scrollToSection }) => {
       {/* Mobile Navbar */}
       {isMobile && (
         <motion.nav
-          className="fixed flex p-8 flex-col items-center justify-center top-0 z-[40] w-full h-dvh border-b bg-primary border-ownWhite"
+          className="fixed flex p-8 flex-col items-center justify-center top-0 z-[40] w-full h-svh border-b bg-primary border-ownWhite"
           variants={menuVariants}
           initial="closed"
           animate={menu ? "open" : "closed"}
