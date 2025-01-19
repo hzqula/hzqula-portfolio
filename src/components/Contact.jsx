@@ -65,7 +65,7 @@ const Contact = ({ id }) => {
           </motion.div>
         </div>
         <h2 className="absolute text-xs md:text-sm text-ownWhite font-code right-12 bottom-8">
-          Muhammad Faruq HZ &#169; 2024
+          Muhammad Faruq HZ &#169; 2025
         </h2>
       </div>
     </section>
